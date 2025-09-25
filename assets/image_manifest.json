@@ -1,0 +1,38 @@
+{
+  "winter": {
+    "hero": "assets/hero-winter.jpg",
+    "suggestions": {
+      "hero": "https://images.unsplash.com/photo-1482192505345-5655af888cc4",
+      "winter-1.jpg (St. Moritz)": "https://images.unsplash.com/photo-1516431883276-5a84acb31f17",
+      "winter-2.jpg (Kyoto)": "https://images.unsplash.com/photo-1480796927426-f609979314bd",
+      "winter-3.jpg (Aspen)": "https://images.unsplash.com/photo-1504805572947-34fad45aed93"
+    }
+  },
+  "spring": {
+    "hero": "assets/hero-spring.jpg",
+    "suggestions": {
+      "hero": "https://images.unsplash.com/photo-1508050919630-b135583b29ab",
+      "spring-1.jpg (Paris)": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+      "spring-2.jpg (Kyoto blossoms)": "https://images.unsplash.com/photo-1504194104404-433180773017",
+      "spring-3.jpg (Tuscany)": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+    }
+  },
+  "summer": {
+    "hero": "assets/hero-summer.jpg",
+    "suggestions": {
+      "hero": "https://images.unsplash.com/photo-1493558157055-2df6f8b4bb78",
+      "summer-1.jpg (Santorini)": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+      "summer-2.jpg (Amalfi)": "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc",
+      "summer-3.jpg (Maldives)": "https://images.unsplash.com/photo-1505764706515-aa95265c5abc"
+    }
+  },
+  "autumn": {
+    "hero": "assets/hero-autumn.jpg",
+    "suggestions": {
+      "hero": "https://images.unsplash.com/photo-1549923786-9d7f2f0d1c2f",
+      "autumn-1.jpg (NYC)": "https://images.unsplash.com/photo-1549921296-3a6b3c3d8be5",
+      "autumn-2.jpg (Kyoto leaves)": "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36",
+      "autumn-3.jpg (Marrakech)": "https://images.unsplash.com/photo-1558980664-10a5d8fadf06"
+    }
+  }
+}
