@@ -247,43 +247,7 @@
   </footer>
   <a class="sticky-cta btn btn-primary" href="contact.html">Plan a Trip</a>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', function(){
-      try {
-        const params = new URLSearchParams(location.search);
-        const debug = params.get('debug') === '1';
-        function log(...args){ if (debug) console.log('[SEASON]', ...args); }
-        const sets = {
-          winter: { overlay: 'linear-gradient(rgba(135,206,250,0.25), rgba(0,0,50,0.3))', accent: '#8ecdf7' },
-          spring: { overlay: 'linear-gradient(rgba(255,182,193,0.25), rgba(0,50,0,0.25))', accent: '#f5a7b8' },
-          summer: { overlay: 'linear-gradient(rgba(64,224,208,0.25), rgba(0,0,50,0.25))', accent: '#48d1cc' },
-          autumn: { overlay: 'linear-gradient(rgba(255,140,0,0.25), rgba(50,20,0,0.25))', accent: '#ff9f40' }
-        };
-        function detectSeason(){
-          const qp = params.get('season');
-          if (qp && sets[qp]) return qp;
-          const m = new Date().getMonth();
-          if (m === 11 || m === 0 || m === 1) return 'winter';
-          if (m >= 2 && m <= 4) return 'spring';
-          if (m >= 5 && m <= 7) return 'summer';
-          return 'autumn';
-        }
-        const season = detectSeason();
-        const data = sets[season];
-        document.documentElement.style.setProperty('--season', data.accent);
-        const overlay = document.querySelector('.hero-overlay');
-        if (overlay) overlay.style.background = data.overlay;
-        if (debug) {
-          const b = document.createElement('div');
-          b.textContent = 'Season: ' + season;
-          Object.assign(b.style, { position:'fixed', left:'12px', bottom:'12px', zIndex:'1000', background:'rgba(0,0,0,.6)', color:'white', padding:'6px 10px', borderRadius:'8px', font:'12px/1.2 Inter, system-ui, sans-serif' });
-          document.body.appendChild(b);
-          log('Accent + overlay set on subpage');
-        }
-      } catch (e) {
-        console.error('[SEASON] Subpage error:', e);
-      }
-    });
-  </script>
+  
+<script src="assets/season.js" defer></script>
 </body>
 </html>
