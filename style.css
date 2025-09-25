@@ -18,3 +18,13 @@ nav a:hover{color:#fff}
 footer{padding:1.5rem 0;color:#9aa4b2;text-align:center;margin-top:2rem;border-top:1px solid rgba(255,255,255,.1)}
 input,textarea,button{width:100%;padding:.8rem;margin:.4rem 0;border-radius:8px;border:none}
 button.btn-primary{background:linear-gradient(135deg,#c9a646,#f1d186);color:#061018;font-weight:600;cursor:pointer}
+
+/* v20 adjustments */
+.intro{padding:6rem 0 2rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.center{text-align:center}
+.cta-row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.85rem 1.1rem;border-radius:999px;border:1px solid transparent;font-weight:600}
+.btn-ghost{background:transparent;border-color:#2a3142;color:#e7ecf6}
+.btn-ghost:hover{background:#1a2030}
+.equal-cards .img-wrap{width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:10px;margin-bottom:.6rem;background:#0f1320}
+.equal-cards .img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
