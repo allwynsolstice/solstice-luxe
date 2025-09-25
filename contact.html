@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solstice Luxe Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.ico" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/favicon-180.png" />
@@ -13,7 +14,7 @@
 </head>
 <body><header>
   <div class="container nav">
-    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Solstice Luxe" class="logo" /></a>
+    <a href="index.html" class="brand"><img src="assets/logo.png" class="logo" alt="Solstice Luxe" /></a>
     <nav><ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -24,35 +25,39 @@
   </div>
 </header>
 
-<main class="hero" style="background-image:url('assets/tania-mousinho-vF0l0bqLRKY-unsplash.jpg')">
-  <div class="hero-overlay"></div>
-  <div class="container">
+<main class="intro">
+  <div class="container center">
     <h1 class="title">Contact Us</h1>
-    <p class="subtitle">Tell us your travel dreams—we'll make them reality</p>
+    <p class="subtitle">Tell us your travel dreams — we’ll make them reality</p>
   </div>
 </main>
-<section><div class="container">
-  <div class="card">
-    
-    <form name="inquiry" method="POST" action="https://formspree.io/f/xxxxxxxx">
-      <div class="form-grid">
-        <div><label>First name<input name="first_name" placeholder="First name" required /></label></div>
-        <div><label>Last name<input name="last_name" placeholder="Last name" required /></label></div>
-        <div><label>Email<input type="email" name="email" placeholder="you@example.com" required /></label></div>
-        <div><label>Phone<input name="phone" placeholder="+1 555 000 0000" /></label></div>
-        <div><label>Destination<input name="destination" placeholder="e.g., Amalfi Coast" required /></label></div>
-        <div><label>Travel dates<input name="dates" placeholder="e.g., 10–18 Nov 2025" /></label></div>
-        <div><label>Travelers<select name="travelers">
-            <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
-        </select></label></div>
-        <div><label>Budget (total)<input name="budget" placeholder="$10,000–$15,000" /></label></div>
-        <div class="full"><label>Preferences<textarea name="preferences" placeholder="Hotel style, experiences, dietary needs, pace, special occasions…"></textarea></label></div>
-      </div>
-      <div style="margin-top:1rem"><button class="btn btn-primary" type="submit">Send Request</button></div>
-    </form>
-
+<section>
+  <div class="container">
+    <div class="card">
+      <form name="inquiry" method="POST" action="https://formspree.io/f/xxxxxxxx">
+        <div class="form-grid">
+          <div><label>First name<input name="first_name" placeholder="First name" required /></label></div>
+          <div><label>Last name<input name="last_name" placeholder="Last name" required /></label></div>
+          <div><label>Email<input type="email" name="email" placeholder="you@example.com" required /></label></div>
+          <div><label>Phone<input name="phone" placeholder="+1 555 000 0000" /></label></div>
+          <div><label>Destination<input name="destination" placeholder="e.g., Amalfi Coast" required /></label></div>
+          <div><label>Travel dates<input name="dates" placeholder="e.g., 10–18 Nov 2025" /></label></div>
+          <div><label>Adults<select name="adults" required>
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6+</option>
+          </select></label></div>
+          <div><label>Children<select name="children">
+            <option>0</option><option>1</option><option>2</option>
+            <option>3</option><option>4</option><option>5</option><option>6+</option>
+          </select></label></div>
+          <div><label>Budget (total)<input name="budget" placeholder="$10,000–$15,000" /></label></div>
+          <div class="full"><label>Preferences<textarea name="preferences" placeholder="Hotel style, experiences, dietary needs, pace, special occasions…"></textarea></label></div>
+        </div>
+        <div style="margin-top:1rem"><button class="btn btn-primary" type="submit">Send Request</button></div>
+      </form>
+    </div>
   </div>
-</div></section>
+</section>
 <footer>
   <div class="container">© <span id="year"></span> Solstice Luxe Travel. All rights reserved.</div>
 </footer>
