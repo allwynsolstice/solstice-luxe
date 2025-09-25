@@ -1,0 +1,19 @@
+{
+  "name": "Solstice Luxe Travel",
+  "short_name": "Solstice Luxe",
+  "icons": [
+    {
+      "src": "assets/favicon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0b0e14",
+  "background_color": "#0b0e14",
+  "display": "standalone"
+}

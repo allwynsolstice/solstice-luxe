@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solstice Luxe Travel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/favicon-180.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="msapplication-config" content="browserconfig.xml" />
+  <meta name="theme-color" content="#0b0e14" />
 </head>
 <body><header>
   <div class="container nav">
@@ -20,21 +24,20 @@
   </div>
 </header>
 
-<main class="hero">
+<main class="hero" style="background-image:url('assets/caleb-kastein-LNJGvTk3Sr8-unsplash.jpg')">
   <div class="hero-overlay"></div>
   <div class="container">
     <h1 class="title">Our Services</h1>
-    <p class="subtitle">From hotel perks to tailor-made itineraries, we handle every detail.</p>
+    <p class="subtitle">From inspiration to itinerary</p>
   </div>
 </main>
 <section><div class="container grid-3">
-  <div class="card"><h3>Hotel-Only VIP</h3><p>Exclusive amenities at top hotels: breakfast, credits, upgrades (when available).</p></div>
-  <div class="card"><h3>Tailor‑Made Itineraries</h3><p>Experiences, guides, dining, logistics—delivered simply.</p></div>
+  <div class="card"><h3>Hotel-Only VIP</h3><p>Exclusive amenities at top hotels: breakfast, credits, upgrades.</p></div>
+  <div class="card"><h3>Tailor‑Made Itineraries</h3><p>Experiences, guides, dining, logistics—delivered seamlessly.</p></div>
   <div class="card"><h3>Air & Private Transfers</h3><p>Commercial or private flights, meet‑and‑greet, chauffeured transfers.</p></div>
 </div></section>
 <footer>
   <div class="container">© <span id="year"></span> Solstice Luxe Travel. All rights reserved.</div>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-<script src="season.js" defer></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body></html>

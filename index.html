@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solstice Luxe Travel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/favicon-180.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="msapplication-config" content="browserconfig.xml" />
+  <meta name="theme-color" content="#0b0e14" />
 </head>
 <body><header>
   <div class="container nav">
@@ -20,22 +24,28 @@
   </div>
 </header>
 
-<main class="hero">
+<main class="hero" style="background-image:url('assets/ryan-spencer-WJDR8_QxVR8-unsplash.jpg')">
   <div class="hero-overlay"></div>
   <div class="container">
-    <h1 class="title" id="hero-text">Luxury travel made effortless</h1>
-    <p class="subtitle" id="hero-sub">Seasonal journeys worldwide</p>
+    <h1 class="title">Luxury Travel Made Effortless</h1>
+    <p class="subtitle">Bespoke journeys tailored to your style</p>
   </div>
 </main>
 <section id="destinations">
   <div class="container">
     <h2 class="section-title">Featured Destinations</h2>
-    <div id="destGrid" class="grid-3"></div>
+    <div class="grid-3">
+      <div class="card"><img src="assets/martin-katler-fchXL-NhDJw-unsplash.jpg" alt="Amalfi Coast"><p>Amalfi Coast</p></div>
+      <div class="card"><img src="assets/ishan-seefromthesky-DtWyp_4YEes-unsplash.jpg" alt="Maldives"><p>Maldives</p></div>
+      <div class="card"><img src="assets/john-towner-Hf4Ap1-ef40-unsplash.jpg" alt="Paris"><p>Paris</p></div>
+      <div class="card"><img src="assets/david-emrich-7BDfk08-agM-unsplash.jpg" alt="Kyoto Blossoms"><p>Kyoto Blossoms</p></div>
+      <div class="card"><img src="assets/caleb-kastein-LNJGvTk3Sr8-unsplash.jpg" alt="Aspen"><p>Aspen</p></div>
+      <div class="card"><img src="assets/mehdi-el-marouazi-OZXMG7bQ-Kc-unsplash.jpg" alt="Marrakech"><p>Marrakech</p></div>
+    </div>
   </div>
 </section>
 <footer>
   <div class="container">© <span id="year"></span> Solstice Luxe Travel. All rights reserved.</div>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-<script src="season.js" defer></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body></html>

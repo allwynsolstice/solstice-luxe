@@ -13,7 +13,8 @@ nav a:hover{color:#fff}
 .hero .subtitle{position:relative;font-size:1.1rem;color:#ccc}
 .section-title{font-size:1.8rem;margin:1rem 0}
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1rem 0}
-.card{background:#121622;border:1px solid rgba(255,255,255,.07);padding:1rem;border-radius:12px}
+.card{background:#121622;border:1px solid rgba(255,255,255,.07);padding:1rem;border-radius:12px;text-align:center}
+.card img{width:100%;border-radius:8px;margin-bottom:.5rem}
 footer{padding:1.5rem 0;color:#9aa4b2;text-align:center;margin-top:2rem;border-top:1px solid rgba(255,255,255,.1)}
 input,textarea,button{width:100%;padding:.8rem;margin:.4rem 0;border-radius:8px;border:none}
 button.btn-primary{background:linear-gradient(135deg,#c9a646,#f1d186);color:#061018;font-weight:600;cursor:pointer}
