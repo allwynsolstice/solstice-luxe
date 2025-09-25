@@ -1,38 +1,19 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #111;
-  color: #fff;
-}
-.hero {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.hero .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.35);
-}
-.hero h1 {
-  position: relative;
-  z-index: 1;
-  font-size: 3rem;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-.grid img {
-  width: 100%;
-  border-radius: 12px;
-}
+body{margin:0;font-family:Inter,sans-serif;background:#0b0e14;color:#e7ecf6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,92%);margin:0 auto}
+header{position:sticky;top:0;background:rgba(11,14,20,.7);backdrop-filter:blur(8px);z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+nav ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0}
+nav a{color:#9aa4b2;font-weight:500}
+nav a:hover{color:#fff}
+.brand{font-weight:700}
+.hero{position:relative;display:flex;align-items:center;justify-content:center;height:60vh;background-size:cover;background-position:center;text-align:center}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.hero .title{position:relative;font-family:'Playfair Display',serif;font-size:2.4rem;text-shadow:0 2px 6px rgba(0,0,0,.7)}
+.hero .subtitle{position:relative;font-size:1.1rem;color:#ccc}
+.section-title{font-size:1.8rem;margin:1rem 0}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1rem 0}
+.card{background:#121622;border:1px solid rgba(255,255,255,.07);padding:1rem;border-radius:12px}
+footer{padding:1.5rem 0;color:#9aa4b2;text-align:center;margin-top:2rem;border-top:1px solid rgba(255,255,255,.1)}
+input,textarea,button{width:100%;padding:.8rem;margin:.4rem 0;border-radius:8px;border:none}
+button.btn-primary{background:linear-gradient(135deg,#c9a646,#f1d186);color:#061018;font-weight:600;cursor:pointer}

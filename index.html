@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solstice Luxe Travel</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <h1 id="hero-text">Discover Winter Escapes</h1>
-  </header>
-  <main>
-    <section id="destinations">
-      <h2>Featured Destinations</h2>
-      <div class="grid" id="dest-grid"></div>
-    </section>
-  </main>
-  <script src="season.js"></script>
-</body>
-</html>
+<body><header>
+  <div class="container nav">
+    <a href="index.html" class="brand">Solstice Luxe</a>
+    <nav><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <h1 class="title" id="hero-text">Luxury travel made effortless</h1>
+    <p class="subtitle" id="hero-sub">Seasonal journeys worldwide</p>
+  </div>
+</main>
+<section id="destinations">
+  <div class="container">
+    <h2 class="section-title">Featured Destinations</h2>
+    <div id="destGrid" class="grid-3"></div>
+  </div>
+</section>
+<footer>
+  <div class="container">© <span id="year"></span> Solstice Luxe Travel. All rights reserved.</div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+<script src="season.js" defer></script>
+</body></html>

@@ -1,98 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Solstice Luxe Travel — Luxury Trips, Made Effortless</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0e14; --card:#121622; --ink:#e7ecf6; --muted:#9aa4b2;
-      --brand:#c9a646; --brand2:#f1d186; --ring:rgba(201,166,70,.35);
-      --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(1100px,92%);margin:0 auto}
-    header{position:sticky;top:0;z-index:40;backdrop-filter:blur(8px);background:rgba(11,14,20,.65);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
-    nav ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0}
-    nav a{color:var(--muted);font-weight:500} nav a:hover,nav a.active{color:var(--ink)}
-    .brand{font-weight:700;letter-spacing:.3px}
-    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.1rem;border-radius:999px;border:1px solid transparent;font-weight:600}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#061018}
-    .btn-ghost{background:transparent;border-color:#2a3142;color:var(--ink)}
-    .hero{position:relative;padding:5rem 0 3.2rem;overflow:clip;border-top:1px solid rgba(255,255,255,.06)}
-    .hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:3rem;align-items:center}
-    .hero-media{aspect-ratio:4/3;width:100%;border-radius:12px;background:#0f1320}
-    .hero-overlay{position:absolute;inset:0;z-index:-1;pointer-events:none}
-    .eyebrow{color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-weight:600;font-size:.85rem}
-    .title,h1,h2{font-family:'Playfair Display',serif}
-    .title{font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.06;margin:.4rem 0 1rem}
-    .subtitle{color:var(--muted);font-size:clamp(1rem,2vw,1.15rem);margin:0 0 1.6rem}
-    section{padding:3.2rem 0;border-top:1px solid rgba(255,255,255,.06)}
-    .section-title{font-size:clamp(1.4rem,2.2vw,1.8rem);margin:0 0 1rem}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.2rem;box-shadow:var(--shadow)}
-    .image-card{position:relative;overflow:hidden;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#0f1320}
-    .image-card img{width:100%;height:100%;object-fit:cover;display:block}
-    .image-card .cap{position:absolute;left:0;right:0;bottom:0;padding:.9rem 1rem;background:linear-gradient(180deg, transparent, rgba(0,0,0,.55));font-weight:600}
-    footer{padding:2.2rem 0 3rem;color:var(--muted)}
-    .sticky-cta{position:fixed;right:16px;bottom:16px;z-index:60}
-    @media (max-width:960px){.hero-grid{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr} nav ul{display:none}}
-    /* Seasonal accent UI */
-    :root{ --season: var(--brand); }
-    .btn:hover{ box-shadow: 0 8px 24px rgba(0,0,0,.25), 0 0 0 4px color-mix(in oklab, var(--season) 35%, transparent); }
-    .section-title::after{ content:""; display:block; height:2px; width:84px; margin-top:.5rem;
-      background: linear-gradient(90deg, color-mix(in oklab, var(--season) 90%, var(--brand2)), transparent); border-radius:2px; }
-    a:hover{ color: color-mix(in oklab, var(--season) 70%, var(--ink)); }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solstice Luxe Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
-<body>
-<header>
+<body><header>
   <div class="container nav">
-    <a href="index.html" class="brand">Solstice Luxe Travel</a>
+    <a href="index.html" class="brand">Solstice Luxe</a>
     <nav><ul>
-      <li><a class="" href="index.html">Home</a></li>
-      <li><a class="" href="about.html">About</a></li>
-      <li><a class="" href="services.html">Services</a></li>
-      <li><a class="" href="faqs.html">FAQs</a></li>
-      <li><a class="active" href="contact.html">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul></nav>
-    <a class="btn btn-ghost" href="contact.html">Plan a Trip</a>
   </div>
 </header>
 
 <main class="hero">
   <div class="hero-overlay"></div>
   <div class="container">
-    <div class="eyebrow">Contact</div>
-    <h1 class="title">Request a trip</h1>
-    <p class="subtitle" style="max-width:760px">Tell us what you have in mind and we’ll reply with ideas and options.</p>
+    <h1 class="title">Contact Us</h1>
+    <p class="subtitle">Tell us your travel dreams—we'll make them reality.</p>
   </div>
 </main>
 <section><div class="container">
-  <div class="card" style="padding:1.1rem">
-    <form name="inquiry" method="POST" action="https://formspree.io/f/XXXXXXXX">
-      <div style="display:grid;gap:.9rem">
-        <input name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="you@example.com" required />
-        <input name="destination" placeholder="Destination" required />
-        <textarea name="message" placeholder="Preferences, dates, travelers…"></textarea>
-      </div>
-      <div style="margin-top:1rem"><button class="btn btn-primary" type="submit">Send request</button></div>
+  <div class="card">
+    <form name="inquiry" method="POST" action="https://formspree.io/f/xxxxxxxx">
+      <input name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="you@example.com" required />
+      <input name="destination" placeholder="Destination" required />
+      <textarea name="message" placeholder="Preferences, dates, travelers…"></textarea>
+      <button class="btn btn-primary" type="submit">Send Request</button>
     </form>
   </div>
 </div></section>
-
 <footer>
   <div class="container">© <span id="year"></span> Solstice Luxe Travel. All rights reserved.</div>
 </footer>
-<a class="sticky-cta btn btn-primary" href="contact.html">Plan a Trip</a>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script src="assets/season.js" defer></script>
-</body>
-</html>
+<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+<script src="season.js" defer></script>
+</body></html>

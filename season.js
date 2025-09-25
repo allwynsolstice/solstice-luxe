@@ -1,63 +1,9 @@
-const hero = document.querySelector('.hero');
-const heroText = document.getElementById('hero-text');
-const grid = document.getElementById('dest-grid');
-
-const seasons = {
-  winter: {
-    hero: 'assets/arnur-turpakpayev-oszml6EAR7M-unsplash.jpg',
-    text: 'Discover Winter Escapes',
-    destinations: [
-      'assets/syra-mettier-cZi0MJksDlk-unsplash.jpg',
-      'assets/tiplada-m-AufXnLwI4z4-unsplash.jpg',
-      'assets/caleb-kastein-LNJGvTk3Sr8-unsplash.jpg'
-    ]
-  },
-  spring: {
-    hero: 'assets/josiah-ferraro-Sj5ClSe9A00-unsplash.jpg',
-    text: 'Bloom into Spring Journeys',
-    destinations: [
-      'assets/john-towner-Hf4Ap1-ef40-unsplash.jpg',
-      'assets/david-emrich-7BDfk08-agM-unsplash.jpg',
-      'assets/lennart-hellwig-YQwVE8cpi4g-unsplash.jpg'
-    ]
-  },
-  summer: {
-    hero: 'assets/ryan-spencer-WJDR8_QxVR8-unsplash.jpg',
-    text: 'Unwind with Summer Adventures',
-    destinations: [
-      'assets/tania-mousinho-vF0l0bqLRKY-unsplash.jpg',
-      'assets/martin-katler-fchXL-NhDJw-unsplash.jpg',
-      'assets/ishan-seefromthesky-DtWyp_4YEes-unsplash.jpg'
-    ]
-  },
-  autumn: {
-    hero: 'assets/luca-bravo-_QdFx92MO2U-unsplash.jpg',
-    text: 'Fall for Autumn Wonders',
-    destinations: [
-      'assets/dan-gold-0H8qDwveRwk-unsplash.jpg',
-      'assets/weichao-deng-6Bj6cNkqG64-unsplash.jpg',
-      'assets/mehdi-el-marouazi-OZXMG7bQ-Kc-unsplash.jpg'
-    ]
-  }
+const sets={
+ winter:{hero:'assets/arnur-turpakpayev-oszml6EAR7M-unsplash.jpg',tag:'Winter escapes, redefined.',sub:'Ski chalets & snowy retreats.',dest:['assets/syra-mettier-cZi0MJksDlk-unsplash.jpg','assets/tiplada-m-AufXnLwI4z4-unsplash.jpg','assets/caleb-kastein-LNJGvTk3Sr8-unsplash.jpg']},
+ spring:{hero:'assets/josiah-ferraro-Sj5ClSe9A00-unsplash.jpg',tag:'Bloom into adventure.',sub:'Cherry blossoms & vineyards.',dest:['assets/john-towner-Hf4Ap1-ef40-unsplash.jpg','assets/david-emrich-7BDfk08-agM-unsplash.jpg','assets/lennart-hellwig-YQwVE8cpi4g-unsplash.jpg']},
+ summer:{hero:'assets/ryan-spencer-WJDR8_QxVR8-unsplash.jpg',tag:'Seas the season.',sub:'Islands, villas, sunshine.',dest:['assets/tania-mousinho-vF0l0bqLRKY-unsplash.jpg','assets/martin-katler-fchXL-NhDJw-unsplash.jpg','assets/ishan-seefromthesky-DtWyp_4YEes-unsplash.jpg']},
+ autumn:{hero:'assets/luca-bravo-_QdFx92MO2U-unsplash.jpg',tag:'Golden journeys await.',sub:'Fall foliage & city breaks.',dest:['assets/dan-gold-0H8qDwveRwk-unsplash.jpg','assets/weichao-deng-6Bj6cNkqG64-unsplash.jpg','assets/mehdi-el-marouazi-OZXMG7bQ-Kc-unsplash.jpg']}
 };
-
-function setSeason(season) {
-  const data = seasons[season];
-  hero.style.backgroundImage = `url(${data.hero})`;
-  heroText.textContent = data.text;
-  grid.innerHTML = '';
-  data.destinations.forEach(src => {
-    const img = document.createElement('img');
-    img.src = src;
-    grid.appendChild(img);
-  });
-}
-
-// Rotate seasons automatically every 8s
-const keys = Object.keys(seasons);
-let i = 0;
-setSeason(keys[i]);
-setInterval(() => {
-  i = (i + 1) % keys.length;
-  setSeason(keys[i]);
-}, 8000);
+function detect(){const m=new Date().getMonth();if(m==11||m<=1)return 'winter';if(m<=4)return 'spring';if(m<=7)return 'summer';return 'autumn';}
+function showSeason(key,page){const d=sets[key];document.querySelector('.hero').style.backgroundImage='url('+d.hero+')';document.querySelector('.hero-overlay').style.background='rgba(0,0,0,.35)';const t=document.querySelector('.hero .title');if(t&&page==='home'){t.innerHTML=d.tag;}else if(t){t.textContent=d.tag;}const s=document.querySelector('.hero .subtitle');if(s)s.textContent=d.sub;const g=document.getElementById('destGrid');if(g){g.innerHTML='';d.dest.forEach(x=>{const img=document.createElement('img');img.src=x;img.style.borderRadius='12px';g.appendChild(img);});}}
+document.addEventListener('DOMContentLoaded',()=>{const url=new URLSearchParams(location.search);let key=url.get('season');if(!key||!sets[key])key=detect();if(document.getElementById('destGrid')){let i=0;showSeason(key,'home');setInterval(()=>{const ks=Object.keys(sets);i=(i+1)%ks.length;showSeason(ks[i],'home');},8000);}else{showSeason(key,'inner');}});
