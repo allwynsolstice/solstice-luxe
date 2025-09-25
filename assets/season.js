@@ -6,14 +6,15 @@ window.addEventListener('DOMContentLoaded', function(){
     const debug = params.get('debug') === '1';
     function log(...args){ if (debug) console.log('[SEASON]', ...args); }
 
+    
     const sets = {
       winter: {
         destinations: [
-          {title: 'St. Moritz, Switzerland', img: 'https://images.unsplash.com/photo-1516431883276-5a84acb31f17?q=80&w=1200&auto=format&fit=crop', alt:'Snowy Alps in St. Moritz'},
-          {title: 'Kyoto, Japan', img: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?q=80&w=1200&auto=format&fit=crop', alt:'Kyoto temple in winter'},
-          {title: 'Aspen, USA', img: 'https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=1200&auto=format&fit=crop', alt:'Aspen ski slopes'}
+          {title: 'St. Moritz, Switzerland', img: 'https://source.unsplash.com/1600x900/?st-moritz,alps,snow', alt:'Snowy Alps in St. Moritz'},
+          {title: 'Kyoto, Japan', img: 'https://source.unsplash.com/1600x900/?kyoto,winter,temple', alt:'Kyoto temple in winter'},
+          {title: 'Aspen, USA', img: 'https://source.unsplash.com/1600x900/?aspen,skislope,snow', alt:'Aspen ski slopes'}
         ],
-        heroImg: 'https://images.unsplash.com/photo-1482192505345-5655af888cc4?q=80&w=1400&auto=format&fit=crop',
+        heroImg: 'https://source.unsplash.com/1400x900/?alps,snow,panorama',
         tagline: "Winter escapes, redefined.",
         sub: "Ski chalets, snowy retreats, and fireside luxury worldwide.",
         overlay: 'linear-gradient(rgba(135,206,250,0.25), rgba(0,0,50,0.3))',
@@ -21,11 +22,11 @@ window.addEventListener('DOMContentLoaded', function(){
       },
       spring: {
         destinations: [
-          {title: 'Paris, France', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop', alt:'Eiffel Tower in spring'},
-          {title: 'Kyoto, Japan', img: 'https://images.unsplash.com/photo-1504194104404-433180773017?q=80&w=1200&auto=format&fit=crop', alt:'Kyoto cherry blossoms'},
-          {title: 'Tuscany, Italy', img: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop', alt:'Rolling hills in Tuscany'}
+          {title: 'Paris, France', img: 'https://source.unsplash.com/1600x900/?paris,spring,eiffel', alt:'Eiffel Tower in spring'},
+          {title: 'Kyoto, Japan', img: 'https://source.unsplash.com/1600x900/?kyoto,cherry-blossom,temple', alt:'Kyoto cherry blossoms'},
+          {title: 'Tuscany, Italy', img: 'https://source.unsplash.com/1600x900/?tuscany,rolling-hills,vineyard', alt:'Rolling hills in Tuscany'}
         ],
-        heroImg: 'https://images.unsplash.com/photo-1508050919630-b135583b29ab?q=80&w=1400&auto=format&fit=crop',
+        heroImg: 'https://source.unsplash.com/1400x900/?paris,blossom,city',
         tagline: "Bloom into adventure.",
         sub: "From cherry blossoms in Kyoto to vineyards in Tuscany, spring is calling.",
         overlay: 'linear-gradient(rgba(255,182,193,0.25), rgba(0,50,0,0.25))',
@@ -33,11 +34,11 @@ window.addEventListener('DOMContentLoaded', function(){
       },
       summer: {
         destinations: [
-          {title: 'Santorini, Greece', img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop', alt:'Santorini caldera at sunset'},
-          {title: 'Amalfi Coast, Italy', img: 'https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?q=80&w=1200&auto=format&fit=crop', alt:'Amalfi Coast cliffs and sea'},
-          {title: 'Maldives', img: 'https://images.unsplash.com/photo-1505764706515-aa95265c5abc?q=80&w=1200&auto=format&fit=crop', alt:'Maldives overwater villas'}
+          {title: 'Santorini, Greece', img: 'https://source.unsplash.com/1600x900/?santorini,sunset,cliffs', alt:'Santorini caldera at sunset'},
+          {title: 'Amalfi Coast, Italy', img: 'https://source.unsplash.com/1600x900/?amalfi,coast,italy', alt:'Amalfi Coast cliffs and sea'},
+          {title: 'Maldives', img: 'https://source.unsplash.com/1600x900/?maldives,overwater,villa', alt:'Maldives overwater villas'}
         ],
-        heroImg: 'https://images.unsplash.com/photo-1493558157055-2df6f8b4bb78?q=80&w=1400&auto=format&fit=crop',
+        heroImg: 'https://source.unsplash.com/1400x900/?santorini,caldera,sea',
         tagline: "Seas the season.",
         sub: "Island paradises, coastal villas, and endless sunshine escapes.",
         overlay: 'linear-gradient(rgba(64,224,208,0.25), rgba(0,0,50,0.25))',
@@ -45,17 +46,18 @@ window.addEventListener('DOMContentLoaded', function(){
       },
       autumn: {
         destinations: [
-          {title: 'New York City, USA', img: 'https://images.unsplash.com/photo-1549921296-3a6b3c3d8be5?q=80&w=1200&auto=format&fit=crop', alt:'NYC skyline with autumn colors'},
-          {title: 'Kyoto, Japan', img: 'https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?q=80&w=1200&auto=format&fit=crop', alt:'Kyoto temple in autumn leaves'},
-          {title: 'Marrakech, Morocco', img: 'https://images.unsplash.com/photo-1558980664-10a5d8fadf06?q=80&w=1200&auto=format&fit=crop', alt:'Marrakech souks and architecture'}
+          {title: 'New York City, USA', img: 'https://source.unsplash.com/1600x900/?new-york,autumn,skyline', alt:'NYC skyline with autumn colors'},
+          {title: 'Kyoto, Japan', img: 'https://source.unsplash.com/1600x900/?kyoto,autumn,temple', alt:'Kyoto temple in autumn leaves'},
+          {title: 'Marrakech, Morocco', img: 'https://source.unsplash.com/1600x900/?marrakech,medina,architecture', alt:'Marrakech souks and architecture'}
         ],
-        heroImg: 'https://images.unsplash.com/photo-1549923786-9d7f2f0d1c2f?q=80&w=1400&auto=format&fit=crop',
+        heroImg: 'https://source.unsplash.com/1400x900/?new-york,autumn,city',
         tagline: "Golden journeys await.",
         sub: "Fall foliage, cultural city breaks, and exotic autumn adventures.",
         overlay: 'linear-gradient(rgba(255,140,0,0.25), rgba(50,20,0,0.25))',
         accent: '#ff9f40'
       }
     };
+
 
     function detectSeason(){
       const qp = params.get('season');
