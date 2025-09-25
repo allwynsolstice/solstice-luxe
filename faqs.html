@@ -4,177 +4,87 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Solstice Luxe Travel — Luxury Trips, Made Effortless</title>
-  <meta name="description" content="Solstice Luxe Travel crafts bespoke, luxury travel experiences tailored to you." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="manifest" href="assets/site.webmanifest">
-  <meta property="og:title" content="Solstice Luxe Travel — Luxury Trips, Made Effortless">
-  <meta property="og:description" content="Solstice Luxe Travel crafts bespoke, luxury travel experiences tailored to you.">
-  <meta property="og:image" content="assets/og-image.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
   <style>
     :root{
-      --bg: #0b0e14;
-      --card:#121622;
-      --ink:#e7ecf6;
-      --muted:#9aa4b2;
-      --brand:#c9a646;
-      --brand2:#f1d186;
-      --ring: rgba(201,166,70,.35);
-      --radius: 18px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --bg:#0b0e14; --card:#121622; --ink:#e7ecf6; --muted:#9aa4b2;
+      --brand:#c9a646; --brand2:#f1d186; --ring:rgba(201,166,70,.35);
+      --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
     a{color:inherit;text-decoration:none}
     .container{width:min(1100px,92%);margin:0 auto}
-    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.1rem;border-radius:999px;border:1px solid transparent;font-weight:600;letter-spacing:.2px;transition:.25s ease}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#061018}
-    .btn-primary:hover{transform:translateY(-2px);filter:saturate(1.1)}
-    .btn-ghost{background:transparent;border-color:#2a3142;color:var(--ink)}
-    .btn-ghost:hover{background:#151a27}
     header{position:sticky;top:0;z-index:40;backdrop-filter:blur(8px);background:rgba(11,14,20,.65);border-bottom:1px solid rgba(255,255,255,.06)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
-    .brand{display:flex;align-items:center;gap:.75rem;font-weight:700;letter-spacing:.3px}
-    .brand-logo{width:44px;height:44px;border-radius:12px;object-fit:contain;background:#0f1320;box-shadow:var(--shadow)}
     nav ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0}
-    nav a{color:var(--muted);font-weight:500}
-    nav a:hover,nav a.active{color:var(--ink)}
-    .hero{position:relative;padding:5.5rem 0 4rem;overflow:clip}
-    .hero::before{content:"";position:absolute;inset:-25% -10% auto -10%;height:60vh;background:radial-gradient(600px 300px at 20% 30%,rgba(201,166,70,.25),transparent 60%),radial-gradient(800px 320px at 80% 20%,rgba(241,209,134,.18),transparent 60%);filter:blur(12px);z-index:-1}
+    nav a{color:var(--muted);font-weight:500} nav a:hover,nav a.active{color:var(--ink)}
+    .brand{font-weight:700;letter-spacing:.3px}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.1rem;border-radius:999px;border:1px solid transparent;font-weight:600}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#061018}
+    .btn-ghost{background:transparent;border-color:#2a3142;color:var(--ink)}
+    .hero{position:relative;padding:5rem 0 3.2rem;overflow:clip;border-top:1px solid rgba(255,255,255,.06)}
     .hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:3rem;align-items:center}
+    .hero-media{aspect-ratio:4/3;width:100%;border-radius:12px;background:#0f1320}
+    .hero-overlay{position:absolute;inset:0;z-index:-1;pointer-events:none}
     .eyebrow{color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-weight:600;font-size:.85rem}
-    .title, h1, h2, .section-title{font-family:'Playfair Display',serif;letter-spacing:.2px}
-    .title{font-size:clamp(2.1rem,3.6vw,3.3rem);line-height:1.06;margin:.5rem 0 1rem}
+    .title,h1,h2{font-family:'Playfair Display',serif}
+    .title{font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.06;margin:.4rem 0 1rem}
     .subtitle{color:var(--muted);font-size:clamp(1rem,2vw,1.15rem);margin:0 0 1.6rem}
-    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)}
-    .hero-media{aspect-ratio:4/3;width:100%;border-radius:calc(var(--radius) - 6px);background:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat}
-    section{padding:4.2rem 0;border-top:1px solid rgba(255,255,255,.06)}
+    section{padding:3.2rem 0;border-top:1px solid rgba(255,255,255,.06)}
     .section-title{font-size:clamp(1.4rem,2.2vw,1.8rem);margin:0 0 1rem}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
     .card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.2rem;box-shadow:var(--shadow)}
-    .card h3{margin:.1rem 0 .6rem;font-size:1.05rem}
-    .card p{color:var(--muted);margin:0}
-    .partners{display:grid;grid-template-columns:repeat(6,1fr);gap:.9rem}
-    .partner{aspect-ratio:3/2;border-radius:14px;display:grid;place-items:center;background:#0f1320;border:1px dashed #2a3142}
-    .partner img{max-width:82%;filter:grayscale(100%) contrast(.9)}
     .image-card{position:relative;overflow:hidden;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#0f1320}
-    .image-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
-    .image-card:hover img{transform:scale(1.04)}
+    .image-card img{width:100%;height:100%;object-fit:cover;display:block}
     .image-card .cap{position:absolute;left:0;right:0;bottom:0;padding:.9rem 1rem;background:linear-gradient(180deg, transparent, rgba(0,0,0,.55));font-weight:600}
-    form{display:grid;gap:.9rem}
-    input,select,textarea{width:100%;background:#0e121b;border:1px solid #2a3142;color:var(--ink);border-radius:12px;padding:.85rem 1rem;font:inherit;outline:none}
-    input:focus,select:focus,textarea:focus{border-color:var(--ring);box-shadow:0 0 0 4px var(--ring)}
-    textarea{min-height:130px;resize:vertical}
-    label{font-weight:600}
-    .req{color:#f1d186}
-    footer{padding:2.6rem 0 3.2rem;color:var(--muted)}
-    .foot{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:2rem}
-    .foot h4{color:var(--ink);margin:.2rem 0 .8rem}
-    @media (max-width: 960px){
-      .hero-grid{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .foot{grid-template-columns:1fr}
-      nav ul{display:none}
-      .menu-btn{display:inline-flex}
-    }
-    @media (min-width: 961px){.menu-btn{display:none}}
-    .mobile-menu{display:none;position:fixed;inset:64px 0 auto;background:#0b0e14;border-top:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
-    .mobile-menu.open{display:block}
-    .mobile-menu a{display:block;padding:1rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.06);color:var(--muted)}
-    .mobile-menu a:hover{color:var(--ink);background:#151a27}
-    
-    /* Seasonal accent UI */
-    :root { --season: var(--brand); }
-    .btn:hover { box-shadow: 0 8px 24px rgba(0,0,0,.25), 0 0 0 4px color-mix(in oklab, var(--season) 35%, transparent); }
-    .section-title::after { content: ""; display:block; height: 2px; width: 84px; margin-top: .5rem;
-      background: linear-gradient(90deg, color-mix(in oklab, var(--season) 90%, var(--brand2)), transparent);
-      border-radius: 2px; }
-    a:hover { color: color-mix(in oklab, var(--season) 70%, var(--ink)); }
-    
-    /* Sticky CTA on mobile */
+    footer{padding:2.2rem 0 3rem;color:var(--muted)}
     .sticky-cta{position:fixed;right:16px;bottom:16px;z-index:60}
-    @media (min-width: 961px){ .sticky-cta{display:none} }
+    @media (max-width:960px){.hero-grid{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr} nav ul{display:none}}
+    /* Seasonal accent UI */
+    :root{ --season: var(--brand); }
+    .btn:hover{ box-shadow: 0 8px 24px rgba(0,0,0,.25), 0 0 0 4px color-mix(in oklab, var(--season) 35%, transparent); }
+    .section-title::after{ content:""; display:block; height:2px; width:84px; margin-top:.5rem;
+      background: linear-gradient(90deg, color-mix(in oklab, var(--season) 90%, var(--brand2)), transparent); border-radius:2px; }
+    a:hover{ color: color-mix(in oklab, var(--season) 70%, var(--ink)); }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="brand" aria-label="Homepage">
-        <img class="brand-logo" alt="Solstice Luxe Travel logo" src="solstice-luxe-logo-256.png">
-        <span>Solstice Luxe Travel</span>
-      </a>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a class="" href="index.html">Home</a></li>
-          <li><a class="" href="about.html">About</a></li>
-          <li><a class="" href="services.html">Services</a></li>
-          <li><a class="active" href="faqs.html">FAQs</a></li>
-          <li><a class="" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="nav-cta">
-        <a href="contact.html" class="btn btn-ghost">Plan a Trip</a>
-        <button class="btn btn-primary menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">Menu</button>
-      </div>
-    </div>
-    <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile menu">
-      <a href="index.html" onclick="toggleMenu(false)">Home</a>
-      <a href="about.html" onclick="toggleMenu(false)">About</a>
-      <a href="services.html" onclick="toggleMenu(false)">Services</a>
-      <a href="faqs.html" onclick="toggleMenu(false)">FAQs</a>
-      <a href="contact.html" onclick="toggleMenu(false)">Contact</a>
-    </div>
-  </header>
+<header>
+  <div class="container nav">
+    <a href="index.html" class="brand">Solstice Luxe Travel</a>
+    <nav><ul>
+      <li><a class="" href="index.html">Home</a></li>
+      <li><a class="" href="about.html">About</a></li>
+      <li><a class="" href="services.html">Services</a></li>
+      <li><a class="active" href="faqs.html">FAQs</a></li>
+      <li><a class="" href="contact.html">Contact</a></li>
+    </ul></nav>
+    <a class="btn btn-ghost" href="contact.html">Plan a Trip</a>
+  </div>
+</header>
 
-  <main class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="eyebrow">FAQs</div>
-      <h1 class="title">Your questions, answered.</h1>
-      <p class="subtitle">If you don’t see your question here, reach out—we’re happy to help.</p>
-    </div>
-  </main>
+<main class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="eyebrow">FAQs</div>
+    <h1 class="title">Your questions, answered.</h1>
+    <p class="subtitle">If you don’t see your question here, reach out—we’re happy to help.</p>
+  </div>
+</main>
+<section><div class="container grid-3">
+  <div class="card"><h3>Why book with Solstice Luxe?</h3><p>As preferred partners, we secure benefits like breakfast, credits, and upgrades (when available).</p></div>
+  <div class="card"><h3>Do you charge a planning fee?</h3><p>For complex, tailor‑made itineraries we may charge a design fee—always disclosed upfront.</p></div>
+  <div class="card"><h3>Can you help with flights & transfers?</h3><p>Yes—we arrange flights, private transfers, and local guides for a seamless trip.</p></div>
+</div></section>
 
-  <section>
-    <div class="container grid-3">
-      <div class="card"><h3>Why should we book with Solstice Luxe Travel instead of directly with a hotel?</h3><p>As preferred partners of luxury hotel programs, we secure exclusive benefits like complimentary breakfast, resort credits, upgrades (when available), and VIP recognition—perks you won’t get by booking online yourself.</p></div>
-<div class="card"><h3>Do you charge a planning fee?</h3><p>For complex, tailor‑made itineraries we may charge a design fee, which is always disclosed upfront. Simple hotel‑only bookings are typically complimentary.</p></div>
-<div class="card"><h3>Can you help with flights and transfers?</h3><p>Absolutely. We can arrange flights, private transfers, and local guides to make your trip seamless from start to finish.</p></div>
-<div class="card"><h3>How do we get started?</h3><p>Simply fill out the trip request form on the Contact page. We’ll follow up to schedule a consultation and craft a proposal tailored to you.</p></div>
-<div class="card"><h3>What destinations do you specialize in?</h3><p>We work globally, but have deep expertise in Europe (Italy, France, Greece), Asia (Japan, Thailand, Maldives), and luxury beach escapes worldwide.</p></div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container foot">
-      <div>
-        <h4>About Solstice Luxe Travel</h4>
-        <p>We help discerning travelers unlock memorable, seamless journeys with exclusive benefits at the world's top hotels.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <p><a href="services.html">Services</a><br><a href="faqs.html">FAQs</a><br><a href="contact.html">Contact</a></p>
-      </div>
-      <div>
-        <h4>Policies</h4>
-        <p><a href="#">Privacy Policy</a><br><a href="#">Terms</a></p>
-      </div>
-    </div>
-    <div class="container" style="margin-top:1.2rem;color:var(--muted)">
-      © <span id="year"></span> Solstice Luxe Travel. All rights reserved.
-    </div>
-  </footer>
-  <a class="sticky-cta btn btn-primary" href="contact.html">Plan a Trip</a>
-
-  
+<footer>
+  <div class="container">© <span id="year"></span> Solstice Luxe Travel. All rights reserved.</div>
+</footer>
+<a class="sticky-cta btn btn-primary" href="contact.html">Plan a Trip</a>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 <script src="assets/season.js" defer></script>
 </body>
 </html>
