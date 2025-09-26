@@ -67,3 +67,6 @@ header{padding:8px 16px;min-height:56px}
 
 /* v28.3 header tighten */
 .nav{min-height:56px;padding:.4rem 0}
+
+/* v28.4 global header */
+header{padding:8px 16px;min-height:56px}
