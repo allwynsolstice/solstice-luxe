@@ -64,3 +64,6 @@ label input:focus,label select:focus,label textarea:focus{
 /* v28.2 global header size + brand title fallback */
 header{padding:8px 16px;min-height:56px}
 .brand-title{display:inline-block;color:#e8e9ea;font-weight:700;font-size:1.05rem;letter-spacing:.02em;margin-left:.5rem}
+
+/* v28.3 header tighten */
+.nav{min-height:56px;padding:.4rem 0}
